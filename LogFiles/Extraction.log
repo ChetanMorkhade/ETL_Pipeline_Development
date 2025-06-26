@@ -36,3 +36,410 @@ FileNotFoundError: [Errno 2] No such file or directory: 'SourceSystems/product_d
 2025-06-25 09:56:05,897-INFO-inventory data extraction completed....
 2025-06-25 09:56:05,897-INFO-stores data extraction started....
 2025-06-25 09:56:06,753-INFO-stores data extraction completed....
+2025-06-26 00:24:13,847-INFO-sales data extraction started....
+2025-06-26 00:24:13,882-ERROR-Error encounted while extrcting the sales data file,[Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv'
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 22, in extract_sales_data_from_file
+    df = pd.read_csv("Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv'
+2025-06-26 00:24:13,916-INFO-product data extraction started....
+2025-06-26 00:24:13,916-ERROR-Error encounted while extrcting the product data file,[Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/product_data.csv'
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 32, in extract_product_data_from_file
+    df = pd.read_csv("Capstone_Apr25_Batch_development/SourceSystems/product_data.csv")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/product_data.csv'
+2025-06-26 00:24:13,918-INFO-supplier data extraction started....
+2025-06-26 00:24:13,918-ERROR-Error encounted while extrcting the supplier data file,File Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json does not exist
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 42, in extract_supplier_data_from_file
+    df = pd.read_json("Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 791, in read_json
+    json_reader = JsonReader(
+                  ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 904, in __init__
+    data = self._get_data_from_filepath(filepath_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 960, in _get_data_from_filepath
+    raise FileNotFoundError(f"File {filepath_or_buffer} does not exist")
+FileNotFoundError: File Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json does not exist
+2025-06-26 00:24:13,925-INFO-inventory data extraction started....
+2025-06-26 00:24:13,929-ERROR-Error encounted while extrcting the inventory data file,lxml not found, please install or use the etree parser.
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 51, in extract_inventory_data_from_file
+    df = pd.read_xml("Capstone_Apr25_Batch_development/SourceSystems/inventory_data.xml",xpath=".//item")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 1160, in read_xml
+    return _parse(
+           ^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 830, in _parse
+    raise ImportError("lxml not found, please install or use the etree parser.")
+ImportError: lxml not found, please install or use the etree parser.
+2025-06-26 00:24:13,931-INFO-stores data extraction started....
+2025-06-26 00:24:14,940-INFO-stores data extraction completed....
+2025-06-26 00:30:19,048-INFO-sales data extraction started....
+2025-06-26 00:30:19,051-ERROR-Error encounted while extrcting the sales data file,[Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv'
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 24, in extract_sales_data_from_file
+    df = pd.read_csv("Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv'
+2025-06-26 00:30:19,054-INFO-product data extraction started....
+2025-06-26 00:30:19,054-ERROR-Error encounted while extrcting the product data file,[Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/product_data.csv'
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 34, in extract_product_data_from_file
+    df = pd.read_csv("Capstone_Apr25_Batch_development/SourceSystems/product_data.csv")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/product_data.csv'
+2025-06-26 00:30:19,056-INFO-supplier data extraction started....
+2025-06-26 00:30:19,056-ERROR-Error encounted while extrcting the supplier data file,File Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json does not exist
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 44, in extract_supplier_data_from_file
+    df = pd.read_json("Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 791, in read_json
+    json_reader = JsonReader(
+                  ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 904, in __init__
+    data = self._get_data_from_filepath(filepath_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 960, in _get_data_from_filepath
+    raise FileNotFoundError(f"File {filepath_or_buffer} does not exist")
+FileNotFoundError: File Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json does not exist
+2025-06-26 00:30:19,057-INFO-inventory data extraction started....
+2025-06-26 00:30:19,059-ERROR-Error encounted while extrcting the inventory data file,lxml not found, please install or use the etree parser.
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 53, in extract_inventory_data_from_file
+    df = pd.read_xml("Capstone_Apr25_Batch_development/SourceSystems/inventory_data.xml",xpath=".//item")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 1160, in read_xml
+    return _parse(
+           ^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 830, in _parse
+    raise ImportError("lxml not found, please install or use the etree parser.")
+ImportError: lxml not found, please install or use the etree parser.
+2025-06-26 00:30:19,060-INFO-stores data extraction started....
+2025-06-26 00:30:19,259-INFO-stores data extraction completed....
+2025-06-26 00:34:20,844-INFO-sales data extraction started....
+2025-06-26 00:34:20,846-ERROR-Error encounted while extrcting the sales data file,[Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv'
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 24, in extract_sales_data_from_file
+    df = pd.read_csv("Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv'
+2025-06-26 00:34:20,849-INFO-product data extraction started....
+2025-06-26 00:34:20,850-ERROR-Error encounted while extrcting the product data file,[Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/product_data.csv'
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 34, in extract_product_data_from_file
+    df = pd.read_csv("Capstone_Apr25_Batch_development/SourceSystems/product_data.csv")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/product_data.csv'
+2025-06-26 00:34:20,851-INFO-supplier data extraction started....
+2025-06-26 00:34:20,851-ERROR-Error encounted while extrcting the supplier data file,File Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json does not exist
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 44, in extract_supplier_data_from_file
+    df = pd.read_json("Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 791, in read_json
+    json_reader = JsonReader(
+                  ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 904, in __init__
+    data = self._get_data_from_filepath(filepath_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 960, in _get_data_from_filepath
+    raise FileNotFoundError(f"File {filepath_or_buffer} does not exist")
+FileNotFoundError: File Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json does not exist
+2025-06-26 00:34:20,853-INFO-inventory data extraction started....
+2025-06-26 00:34:20,854-ERROR-Error encounted while extrcting the inventory data file,lxml not found, please install or use the etree parser.
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 54, in extract_inventory_data_from_file
+    df = pd.read_xml(xml_file, xpath=".//item")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 1160, in read_xml
+    return _parse(
+           ^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 830, in _parse
+    raise ImportError("lxml not found, please install or use the etree parser.")
+ImportError: lxml not found, please install or use the etree parser.
+2025-06-26 00:34:20,854-INFO-stores data extraction started....
+2025-06-26 00:34:20,993-INFO-stores data extraction completed....
+2025-06-26 00:40:46,252-INFO-sales data extraction started....
+2025-06-26 00:40:46,255-ERROR-Error encounted while extrcting the sales data file,[Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv'
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 24, in extract_sales_data_from_file
+    df = pd.read_csv("Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/sales_data_Linux_remote.csv'
+2025-06-26 00:40:46,286-INFO-product data extraction started....
+2025-06-26 00:40:46,286-ERROR-Error encounted while extrcting the product data file,[Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/product_data.csv'
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 34, in extract_product_data_from_file
+    df = pd.read_csv("Capstone_Apr25_Batch_development/SourceSystems/product_data.csv")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+             ^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'Capstone_Apr25_Batch_development/SourceSystems/product_data.csv'
+2025-06-26 00:40:46,287-INFO-supplier data extraction started....
+2025-06-26 00:40:46,288-ERROR-Error encounted while extrcting the supplier data file,File Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json does not exist
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 44, in extract_supplier_data_from_file
+    df = pd.read_json("Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 791, in read_json
+    json_reader = JsonReader(
+                  ^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 904, in __init__
+    data = self._get_data_from_filepath(filepath_or_buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\json\_json.py", line 960, in _get_data_from_filepath
+    raise FileNotFoundError(f"File {filepath_or_buffer} does not exist")
+FileNotFoundError: File Capstone_Apr25_Batch_development/SourceSystems/supplier_data.json does not exist
+2025-06-26 00:40:46,296-INFO-inventory data extraction started....
+2025-06-26 00:40:46,297-ERROR-Error encounted while extrcting the inventory data file,lxml not found, please install or use the etree parser.
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 54, in extract_inventory_data_from_file
+    df = pd.read_xml(xml_file, xpath=".//item")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 1160, in read_xml
+    return _parse(
+           ^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 830, in _parse
+    raise ImportError("lxml not found, please install or use the etree parser.")
+ImportError: lxml not found, please install or use the etree parser.
+2025-06-26 00:40:46,298-INFO-stores data extraction started....
+2025-06-26 00:40:46,572-INFO-stores data extraction completed....
+2025-06-26 00:43:40,368-INFO-sales data extraction started....
+2025-06-26 00:43:40,516-INFO-sales data extraction completed....
+2025-06-26 00:43:40,516-INFO-product data extraction started....
+2025-06-26 00:43:40,595-INFO-product data extraction completed....
+2025-06-26 00:43:40,595-INFO-supplier data extraction started....
+2025-06-26 00:43:40,715-INFO-supplier data extraction completed....
+2025-06-26 00:43:40,715-INFO-inventory data extraction started....
+2025-06-26 00:43:40,716-ERROR-Error encounted while extrcting the inventory data file,lxml not found, please install or use the etree parser.
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 54, in extract_inventory_data_from_file
+    df = pd.read_xml(xml_file, xpath=".//item")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 1160, in read_xml
+    return _parse(
+           ^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 830, in _parse
+    raise ImportError("lxml not found, please install or use the etree parser.")
+ImportError: lxml not found, please install or use the etree parser.
+2025-06-26 00:43:40,717-INFO-stores data extraction started....
+2025-06-26 00:43:40,827-INFO-stores data extraction completed....
+2025-06-26 00:47:52,734-INFO-sales data extraction started....
+2025-06-26 00:47:52,858-INFO-sales data extraction completed....
+2025-06-26 00:47:52,858-INFO-product data extraction started....
+2025-06-26 00:47:52,926-INFO-product data extraction completed....
+2025-06-26 00:47:52,926-INFO-supplier data extraction started....
+2025-06-26 00:47:53,017-INFO-supplier data extraction completed....
+2025-06-26 00:47:53,018-INFO-inventory data extraction started....
+2025-06-26 00:47:53,019-ERROR-Error encounted while extrcting the inventory data file,lxml not found, please install or use the etree parser.
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 54, in extract_inventory_data_from_file
+    df = pd.read_xml(xml_file, xpath=".//item")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 1160, in read_xml
+    return _parse(
+           ^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 830, in _parse
+    raise ImportError("lxml not found, please install or use the etree parser.")
+ImportError: lxml not found, please install or use the etree parser.
+2025-06-26 00:47:53,021-INFO-stores data extraction started....
+2025-06-26 00:47:53,153-INFO-stores data extraction completed....
+2025-06-26 00:50:54,321-INFO-sales data extraction started....
+2025-06-26 00:50:54,410-INFO-sales data extraction completed....
+2025-06-26 00:50:54,410-INFO-product data extraction started....
+2025-06-26 00:50:54,457-INFO-product data extraction completed....
+2025-06-26 00:50:54,457-INFO-supplier data extraction started....
+2025-06-26 00:50:54,511-INFO-supplier data extraction completed....
+2025-06-26 00:50:54,511-INFO-inventory data extraction started....
+2025-06-26 00:50:54,513-ERROR-Error encounted while extrcting the inventory data file,lxml not found, please install or use the etree parser.
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 53, in extract_inventory_data_from_file
+    df = pd.read_xml("Capstone_Apr25_Batch_development/SourceSystems/inventory_data.xml", xpath=".//item")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 1160, in read_xml
+    return _parse(
+           ^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 830, in _parse
+    raise ImportError("lxml not found, please install or use the etree parser.")
+ImportError: lxml not found, please install or use the etree parser.
+2025-06-26 00:50:54,514-INFO-stores data extraction started....
+2025-06-26 00:50:54,606-INFO-stores data extraction completed....
+2025-06-26 00:53:48,344-INFO-sales data extraction started....
+2025-06-26 00:53:48,689-INFO-sales data extraction completed....
+2025-06-26 00:53:48,690-INFO-product data extraction started....
+2025-06-26 00:53:48,767-INFO-product data extraction completed....
+2025-06-26 00:53:48,767-INFO-supplier data extraction started....
+2025-06-26 00:53:48,851-INFO-supplier data extraction completed....
+2025-06-26 00:53:48,851-INFO-inventory data extraction started....
+2025-06-26 00:53:48,877-ERROR-Error encounted while extrcting the inventory data file,Start tag expected, '<' not found, line 1, column 1 (<string>, line 1)
+Traceback (most recent call last):
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\Capstone_Apr25_Batch_development\CodeBase\extract.py", line 53, in extract_inventory_data_from_file
+    df = pd.read_xml("Capstone_Apr25_Batch_development/SourceSystems/inventory_data.xml", xpath=".//item")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 1160, in read_xml
+    return _parse(
+           ^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 852, in _parse
+    data_dicts = p.parse_data()
+                 ^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 556, in parse_data
+    self.xml_doc = self._parse_doc(self.path_or_buffer)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "F:\Software Testing\ETL Automation with Python\Project\PythonProject\.venv\Lib\site-packages\pandas\io\xml.py", line 647, in _parse_doc
+    document = fromstring(
+               ^^^^^^^^^^^
+  File "src\\lxml\\etree.pyx", line 3307, in lxml.etree.fromstring
+  File "src\\lxml\\parser.pxi", line 1995, in lxml.etree._parseMemoryDocument
+  File "src\\lxml\\parser.pxi", line 1882, in lxml.etree._parseDoc
+  File "src\\lxml\\parser.pxi", line 1164, in lxml.etree._BaseParser._parseDoc
+  File "src\\lxml\\parser.pxi", line 633, in lxml.etree._ParserContext._handleParseResultDoc
+  File "src\\lxml\\parser.pxi", line 743, in lxml.etree._handleParseResult
+  File "src\\lxml\\parser.pxi", line 672, in lxml.etree._raiseParseError
+  File "<string>", line 1
+lxml.etree.XMLSyntaxError: Start tag expected, '<' not found, line 1, column 1
+2025-06-26 00:53:48,902-INFO-stores data extraction started....
+2025-06-26 00:53:49,326-INFO-stores data extraction completed....
+2025-06-26 00:56:04,601-INFO-sales data extraction started....
+2025-06-26 00:56:04,709-INFO-sales data extraction completed....
+2025-06-26 00:56:04,709-INFO-product data extraction started....
+2025-06-26 00:56:04,765-INFO-product data extraction completed....
+2025-06-26 00:56:04,766-INFO-supplier data extraction started....
+2025-06-26 00:56:04,826-INFO-supplier data extraction completed....
+2025-06-26 00:56:04,826-INFO-inventory data extraction started....
+2025-06-26 00:56:04,916-INFO-inventory data extraction completed....
+2025-06-26 00:56:04,916-INFO-stores data extraction started....
+2025-06-26 00:56:05,008-INFO-stores data extraction completed....
+2025-06-26 01:00:14,349-INFO-sales data extraction started....
+2025-06-26 01:00:14,495-INFO-sales data extraction completed....
+2025-06-26 01:00:14,496-INFO-product data extraction started....
+2025-06-26 01:00:14,584-INFO-product data extraction completed....
+2025-06-26 01:00:14,584-INFO-supplier data extraction started....
+2025-06-26 01:00:14,705-INFO-supplier data extraction completed....
+2025-06-26 01:00:14,705-INFO-inventory data extraction started....
+2025-06-26 01:00:14,991-INFO-inventory data extraction completed....
+2025-06-26 01:00:14,991-INFO-stores data extraction started....
+2025-06-26 01:00:15,241-INFO-stores data extraction completed....
