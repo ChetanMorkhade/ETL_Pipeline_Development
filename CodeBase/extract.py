@@ -28,6 +28,7 @@ def extract_sales_data_from_file():
         logger.error(f"Error encounted while extrcting the sales data file,{e}",exc_info=True)
 
 
+
 def extract_product_data_from_file():
     try:
         logger.info("product data extraction started....")
@@ -50,8 +51,13 @@ def extract_supplier_data_from_file():
 def extract_inventory_data_from_file():
     try:
         logger.info("inventory data extraction started....")
+<<<<<<< HEAD
         df = pd.read_xml("SourceSystems/inventory_data.xml", xpath=".//item")
         df.to_sql("staging_inventory", mysql_engine, if_exists='replace', index=False)
+=======
+        df = pd.read_xml("SourceSystems/inventory_data.xml",xpath=".//item")
+        df.to_sql("staging_inventory",mysql_engine,if_exists='replace',index=False)
+>>>>>>> 6d874cd3ddababf58aa9b8ae64039ef4599491f7
         logger.info("inventory data extraction completed....")
     except Exception as e:
         logger.error(f"Error encounted while extrcting the inventory data file,{e}",exc_info=True)
@@ -66,10 +72,14 @@ def extract_stores_data_from_oracle():
     except Exception as e:
         logger.error(f"Error encounted while extrcting the stores data from oracle,{e}",exc_info=True)
 
+
+
+
 if __name__ == "__main__":
     extract_sales_data_from_file()
     extract_product_data_from_file()
     extract_supplier_data_from_file()
     extract_inventory_data_from_file()
     extract_stores_data_from_oracle()
+
 
